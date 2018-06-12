@@ -1,8 +1,19 @@
-function takeANumber (arrayOfPeople, newPersonName) {
-  arrayOfPeople.push(newPersonName)
-  var position = arrayOfPeople.indexOf(newPersonName) + 1
-  return `Welcome, ${newPersonName}. You are number ${position} in line.`;
+let count = 0
+let line = []
+
+function takeANumber () {
+    count += 1
+    line.push(count)
+    return `Your number is: ${count}`
 }
+
+console.log(takeANumber())
+console.log(takeANumber())
+console.log(takeANumber())
+console.log(nowServing(line))
+console.log(nowServing(line))
+console.log(nowServing(line))
+console.log(takeANumber())
 
 function nowServing (arrayOfPeople) {
   if (arrayOfPeople.length === 0) {
